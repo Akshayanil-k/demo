@@ -1,0 +1,38 @@
+.section {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 60%;
+    margin: 10rem auto 0 auto;
+
+    
+}
+.section img{
+    height: fit-content;
+}
+.section h1{
+    padding: 60px;
+    margin: 5px;
+    color: navy;
+}
+.section p{
+    color: black;
+
+}
+.be-footer{
+    background-color: navy;
+}
+.table{
+    align-items: center;
+    margin: 50px;
+}
+
+.bnx-quotes__wrapper{
+    align-items: center;
+    margin: 50px;
+
+}
+.img{
+    align-tracks: right;
+}
