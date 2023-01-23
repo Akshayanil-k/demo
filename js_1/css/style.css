@@ -1,0 +1,51 @@
+
+h1 {  
+    text-align: center;  
+    padding: 23px;  
+    background-color: skyblue;  
+    color: white;  
+    }  
+  
+#clear{  
+width: 270px;  
+border: 3px solid gray;  
+    border-radius: 3px;  
+    padding: 20px;  
+    background-color: red;  
+}  
+  
+.formstyle  
+{  
+width: 300px;  
+height: 530px;  
+margin: auto;  
+border: 3px solid rgb(18, 18, 18);  
+border-style: dotted;  
+padding: 10px;  
+}  
+  
+  
+  
+input  
+{  
+width: 15px;  
+background-color: rgb(137, 175, 198);  
+color: rgb(252, 249, 249);  
+border: 3px solid rgb(11, 49, 30);  
+    border-radius: 5px;  
+    padding: 26px;  
+    margin: 5px;  
+    font-size: 15px;  
+}  
+  
+  
+#calc{  
+width: 250px;  
+border: 5px solid rgb(10, 10, 10);  
+    border-radius: 3px;  
+    padding: 20px;  
+    margin: auto; 
+    background-color: rgb(199, 114, 65); 
+
+}  
+  
