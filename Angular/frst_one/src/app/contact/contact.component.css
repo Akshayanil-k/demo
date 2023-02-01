@@ -1,0 +1,17 @@
+.bnx-contact-us--home-sec .bnx-contact-us__left {
+  padding-top: 115px;
+  padding: 40px 0;
+  width: 100%;
+  padding-right: 0;
+}
+
+.bnx-contact-us__left {
+  width: 70%;
+  padding: 50px 50px 50px 0;
+  position: relative;
+}
+
+.tab {
+  align-items: center;
+  margin: 50px;
+}/*# sourceMappingURL=contact.component.css.map */
