@@ -1,0 +1,67 @@
+.blur {
+	overflow: hidden;
+	position: relative;
+
+	+ .blur {
+		margin-top: 20px;
+	}
+}
+
+.blurry {
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: cover;
+	content: '';
+	filter: blur(8px);
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+  
+	.alt & {
+		background-position: left top;
+		left: 0;
+		right: auto;
+	}
+	
+	.middle & {
+		background-position: center top;
+		transform: translateX(-50%);
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.overlay {
+	align-items: center;
+	background-color: rgba(0, 0, 0, .4);
+	box-sizing: border-box;
+	color: white;
+	display: flex;
+	font-size: 20px;
+	height: 100%;
+	padding: 20px 120px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	z-index: 1;
+
+	.alt & {
+		left: 0;
+		right: auto;
+	}
+	
+	.middle & {
+		transform: translateX(-50%);
+	}
+  
+	h2 {
+		font-size: 36px;
+		margin: 0;
+	}
+}
