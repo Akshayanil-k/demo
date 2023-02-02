@@ -1,0 +1,15 @@
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(251, 250, 249);
+}
+.ul-div{
+    display: flex;
+    list-style: none;
+}
+.ul-div>li{
+    padding: 100px;
+}
+@import url(../app/content/content.component.scss);
+@import url(../app/home/home.component.scss);
