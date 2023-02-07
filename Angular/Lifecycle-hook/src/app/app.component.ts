@@ -11,16 +11,20 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked,
-  AfterViewInit, AfterViewChecked, OnDestroy {
+export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
+//implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked,
+ // AfterViewInit, AfterViewChecked, OnDestroy {
+ // title(title: any) {
+  //  throw new Error('Method not implemented.');
+  //}
 
   displayChild: boolean = false;
-  value: string = 'succes';
+  //value: string = 'succes';
 
-  constructor() {
+ /* constructor() {
     console.log("AppComponent:Constructor");
   }
 
@@ -57,8 +61,8 @@ export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentIni
 
   ngOnDestroy() {
     console.log("AppComponent:OnDestroy");
-  }
+  }*/
   onShowOrHide(): void{
     this.displayChild = !this.displayChild;
   }
-}
+  }
