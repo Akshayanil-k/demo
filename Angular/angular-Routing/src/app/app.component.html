@@ -1,0 +1,28 @@
+<nav>
+    <div class="main-div">
+        <div>
+            <h4>Mobile Service</h4>
+        </div>
+        <div>
+            <ul class="ul-div">
+                <li routerLink="/home" routerLinkActive="active">home</li>
+                <li routerLink="src/app/home/about-us" routerLinkActive="active">about us</li>
+                <li routerLink="/phones/samsung/65,0000" routerLinkActive="active">phones</li>
+                <li routerLink="/phones/iphone" routerLinkActive="active"><a (click)="phoneclick('iphone')">phones</a></li>
+                <li routerLink="/phones/LG" routerLinkActive="active"><a (click)="phoneclick('LG')">phones</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="content" style="height: 500px;width: 100%;">
+    <router-outlet></router-outlet>
+</div>
+
+
+<footer class="footer">
+    <span>Privacy Policy</span>&nbsp;&nbsp;&nbsp;
+    <span>Terms of Use</span>&nbsp;&nbsp;&nbsp;
+    <span>Cookie Policy</span>
+    <p>Copyright © 2023 - 24 Mobile Service</p>
+</footer>

@@ -1,0 +1,27 @@
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.ul-div{
+    display: flex;
+    list-style: none;
+}
+.ul-div>li{
+    padding: 50px;
+}
+footer {
+    text-align: center;
+    background-color: rgb(1, 1, 10);
+    color: white;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 3px 15px;
+  }
+  .active{
+    color:yellowgreen;
+    text-decoration: underline;
+
+  }
