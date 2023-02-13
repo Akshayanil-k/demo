@@ -1,0 +1,15 @@
+.navbar-nav{
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 125, 125);
+    color: rgb(14, 13, 13);
+}
+.navbar-nav>li{
+    padding: 50px;
+}

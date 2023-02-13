@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Place</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td [ngClass]="{'highlighted': isHighlighted}">{{ user.name }}</td>
+        <td [ngClass]="{'highlighted': isHighlighted}">{{ user.email }}</td>
+        <td [ngClass]="{'highlighted': isHighlighted}">{{ user.place }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="changeStyle()">Change Style</button>
+  
+  
