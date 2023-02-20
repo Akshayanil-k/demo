@@ -1,0 +1,16 @@
+<form>
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" required>
+
+  <label for="country">Country</label>
+  <select name="country" id="country" required>
+    <option value="">Select Country</option>
+    <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+
