@@ -1,0 +1,36 @@
+<!-- Display Users -->
+<div class="div-1">
+    <h2>Users</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.website }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Display Posts -->
+    <h2>Posts</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <td>{{ post.title }}</td>
+                <td>{{ post.body }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
