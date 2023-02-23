@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup" (ngSubmit)="createData()">
+    <label>ID</label>
+    <input type="text" formControlName="ID">
+
+    <label>Name</label>
+    <input type="text" formControlName="Name">
+    <label>Email</label>
+    <input type="text" formControlName="Email">
+    <label>Address</label>
+    <textarea formControlName="Address"></textarea>
+
+    <button type="submit">Create</button>
+    <button type="button" (click)="updateData()">Update</button>
+    <button type="button" (click)="patchData()">Patch</button>
+    <button type="button" (click)="deleteData()">Delete</button>
+</form>
