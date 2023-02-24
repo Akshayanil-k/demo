@@ -1,0 +1,140 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit(employeeForm)">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+          
+        <div *ngIf="employeeForm.get('firstName')?.invalid && (employeeForm.get('firstName')?.dirty || employeeForm.get('firstName')?.touched)">
+            <div *ngIf="employeeForm.get('firstName')?.errors?.['required']">
+              First Name is required
+            </div>
+            <div *ngIf="employeeForm.get('firstName')?.errors?.['pattern']">
+              First Name must contain only letters
+            </div>
+          </div>
+          
+
+
+        <!--<div *ngIf="employeeForm.get('firstName').invalid && (employeeForm.get('firstName').dirty || employeeForm.get('firstName').touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('firstName').errors.required">First Name is required</div>
+            <div *ngIf="employeeForm.get('firstName').errors.pattern">First Name should contain only letters and spaces
+            </div>
+        </div>-->
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName">
+        <div *ngIf="employeeForm.get('lastName')?.invalid && (employeeForm.get('lastName')?.dirty || employeeForm.get('lastName')?.touched)">
+           <div *ngIf="employeeForm.get('lastName')?.errors?.['required']">Last Name is required</div>
+            <div *ngIf="employeeForm.get('lastName')?.errors?.['pattern']">Last Name should contain only letters and spaces
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" formControlName="age">
+        <div *ngIf="employeeForm.get('age')?.invalid && (employeeForm.get('age')?.dirty || employeeForm.get('age')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('age')?.errors?.['required']">Age is required</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+        <div *ngIf="employeeForm.get('phoneNumber')?.invalid && (employeeForm.get('phoneNumber')?.dirty || employeeForm.get('phoneNumber')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('phoneNumber')?.errors?.['required']">Phone Number is required</div>
+            <div *ngIf="employeeForm.get('phoneNumber')?.errors?.['minlength']">Phone Number should be 10 digits</div>
+            <div *ngIf="employeeForm.get('phoneNumber')?.errors?.['maxlength']">Phone Number should be 10 digits</div>
+            <div *ngIf="employeeForm.get('phoneNumber')?.errors?.['pattern']">Phone Number should contain only digits</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" formControlName="address"></textarea>
+        <div *ngIf="employeeForm.get('address')?.invalid && (employeeForm.get('address')?.dirty || employeeForm.get('address')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('address')?.errors?.['required']">Address is required</div>
+            <div *ngIf="employeeForm.get('address')?.errors?.['maxlength']">Address should not exceed 50 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="education">Education</label>
+        <select class="form-control" id="education" formControlName="education">
+            <option value="">Select Education</option>
+            <option value="High School">High School</option>
+            <option value="Associate's Degree">Associate's Degree</option>
+            <option value="Bachelor's Degree">Bachelor's Degree</option>
+            <option value="Master's Degree">Master's Degree</option>
+            <option value="Doctorate">Doctorate</option>
+        </select>
+        <div *ngIf="employeeForm.get('education')?.invalid && (employeeForm.get('education')?.dirty || employeeForm.get('education')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('education')?.errors?.['required']">Education is required</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('email')?.errors?.['required']">Email is required</div>
+            <div *ngIf="employeeForm.get('email')?.errors?.['email']">Invalid email format</div>
+            <div *ngIf="employeeForm.get('email')?.errors?.['minlength']">Email should be at least 5 characters</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <div *ngIf="employeeForm.get('password')?.invalid && (employeeForm.get('password')?.dirty || employeeForm.get('password')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('password')?.errors?.['required']">Password is required</div>
+            <div *ngIf="employeeForm.get('password')?.errors?.['maxlength']">Password should not exceed 15 characters</div>
+            <div *ngIf="employeeForm.get('password')?.errors?.['pattern']">Password should contain at least one uppercase
+                letter, one symbol, and one digit</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
+        <div *ngIf="employeeForm.get('confirmPassword')?.invalid && (employeeForm.get('confirmPassword')?.dirty || employeeForm.get('confirmPassword')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('confirmPassword')?.errors?.['required']">Confirm Password is required</div>
+            <div *ngIf="employeeForm.hasError('passwordMismatch')">Passwords do not match</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" class="form-control" id="message" formControlName="message">
+        <div *ngIf="employeeForm.get('message')?.invalid && (employeeForm.get('message')?.dirty || employeeForm.get('message')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="employeeForm.get('message')?.errors?.['maxlength']">Message should not exceed 15 characters</div>
+        </div>
+    </div>
+    
+    <button type="submit"  class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
+    <a routerLink="/employee-details">save 1</a>
+    <hr>
+    <h2>Employee Details:</h2><hr>
+    <p>First Name: {{ employeeForm.value.firstName}}</p>
+    <p>Last Name: {{ employeeForm.value. lastName }}</p>
+    <p>Age: {{ employeeForm.value. age }}</p>
+    <p>phoneNumber: {{ employeeForm.value.phoneNumber}}</p>
+    <p>Address: {{ employeeForm.value.address }}</p>
+    
+    <p>Education: {{ employeeForm.value.education }}</p>
+    <p>Email: {{ employeeForm.value. email }}</p>
+    <p>Password: {{ employeeForm.value.password }}</p>
+    <p>Confirm Password: {{ employeeForm.value.  confirmPassword }}</p>
+    <p>Message: {{ employeeForm.value.message }}</p>
+   </form>
+
+   
