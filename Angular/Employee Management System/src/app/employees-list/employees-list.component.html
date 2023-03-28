@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="nav col-md-2" style="padding-left: 0px;">
+      <app-side-nav-bar></app-side-nav-bar>
+    </div>
+    <div class="col-md-10 p-0">
+      <div class="row">
+        <div class="app-header">
+        </div>
+        <div class="col-md-12">
+          <h1 class="text-center my-4">USER DETAILS</h1>
+          <div class="search d-flex justify-content-center align-items-center">
+            <input class="form-control form-control-m w-50 mr-2" type="text" [(ngModel)]="searchValue" (keyup)="search()" placeholder="Search Employees">
+            <button class="btn btn-m btn-primary" (click)="search()">Search</button>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Job Role</th>
+                    <th>Age</th>
+                    <th>Leaves Taken</th>
+                    <th>More Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of empDetails;">
+                    <td>{{item.id}}</td>
+                    <td>{{item.fname}} {{item.lname}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.emprole}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.noofleaves}}</td>
+                    <td><button class="btn btn-outline-primary" (click)="empDetail(item.id)">More Details</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

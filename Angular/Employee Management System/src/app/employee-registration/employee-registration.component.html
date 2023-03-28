@@ -1,0 +1,160 @@
+<div class="abc">
+  <div class="main-body">
+    <div class="row">
+      <div class="col-md-2">
+        <app-side-nav-bar></app-side-nav-bar>
+      </div>
+      <div class="col-md-10">
+        <div class="row gutters-sm">
+          <div class="row g-0 ">
+            <div class="col-xl-6 border-primary" style="width: 600px; margin: 0px auto;">
+              <div class="card-body p-md-5 ">
+                <h3 class="mb-5 text-uppercase text-primary">Employee registration form</h3>
+
+                <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm)">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" class="form-control form-control-lg" formControlName="fname" />
+                        <label class="form-label">First Name</label><br>
+                        <span class="text-danger"
+                          *ngIf="regForm.get('fname')?.invalid && regForm.get('fname')?.touched">First Name Only Contain
+                          Alphabets</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" class="form-control form-control-lg" formControlName="lname" />
+                        <label class="form-label">Last Name</label><br>
+                        <span class="text-danger"
+                          *ngIf="regForm.get('lname')?.invalid && regForm.get('lname')?.touched">Last Name Only Contain
+                          Alphabets</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <div class="form-outline">
+                      <input type="email" class="form-control form-control-lg" formControlName="email" />
+                      <label class="form-label">Email</label><br>
+                      <span class="text-danger"
+                        *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">Please Enter A Valid
+                        Email</span>
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" class="form-control form-control-lg" formControlName="emprole" />
+                    <label class="form-label">Employee Job Role</label><br>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('emprole')?.invalid && regForm.get('emprole')?.touched">Please Enter A Valid
+                      Input</span>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="number" class="form-control form-control-lg" formControlName="age" />
+                        <label class="form-label">Age</label><br>
+                        <span class="text-danger"
+                          *ngIf="regForm.get('age')?.invalid && regForm.get('age')?.touched">Please Enter A Valid
+                          Age</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="date" class="form-control form-control-lg" formControlName="dob" />
+                        <label class="form-label">Date Of Birth</label><br>
+                        <span class="text-danger"
+                          *ngIf="regForm.get('dob')?.invalid && regForm.get('dob')?.touched">Please Enter A Valid
+                          Form</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+
+                      <select class="select border border-seconadry w-100" style="padding: 12px 28px;"
+                        formControlName="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <label class="form-label">Gender</label><br>
+                      <span class="text-danger"
+                        *ngIf="regForm.get('gender')?.invalid && regForm.get('gender')?.touched">Please Enter A Valid
+                        Input</span>
+
+                    </div>
+                    <div class="col-md-6 mb-4">
+
+                      <select class="select border border-seconadry w-100" style="padding: 12px 28px;"
+                        formControlName="bloodgroup">
+                        <option value="">Blood Group</option>
+                        <option value="O+ve">O+ve</option>
+                        <option value="O-ve">O-ve</option>
+                        <option value="A+ve">A-ve</option>
+                        <option value="A-ve">A-ve</option>
+                        <option value="B+ve">B+ve</option>
+                        <option value="B-ve">B-ve</option>
+                        <option value="AB+ve">AB+ve</option>
+                        <option value="AB-ve">AB-ve</option>
+                      </select>
+                      <label class="form-label">Blood Group</label><br>
+                      <span class="text-danger"
+                        *ngIf="regForm.get('bloodgroup')?.invalid && regForm.get('bloodgroup')?.touched">Please Enter A
+                        Valid Input</span>
+
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="number" class="form-control form-control-lg" formControlName="phone" />
+                    <label class="form-label">Phone Number</label><br>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('phone')?.invalid && regForm.get('phone')?.touched">Please Enter A Valid
+                      Number</span>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" class="form-control form-control-lg" formControlName="password" />
+                    <label class="form-label">Password</label><br>
+                    <div>
+                      <span class="text-danger"
+                        *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched">Password Must
+                        Contain 8-15 Atleaset One Upper,Lower,Number,Special Character</span>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="password" class="form-control form-control-lg" formControlName="confirmpassword" />
+                    <label class="form-label">Confirm Password</label><br>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('confirmpassword')?.invalid && regForm.get('confirmpassword')?.touched">Password
+                      Must Contain 8-15 Atleaset One Upper,Lower,Number,Special Character</span>
+                    <span class="text-danger" *ngIf=" regForm.get('confirmpassword')!.hasError('Mustmatch')">Password
+                      Mismatched</span>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="file" class="form-control form-control-lg" formControlName="img" id="img"
+                      accept="image/*" />
+                    <label class="form-label">Upload Image</label><br>
+                    <span class="text-danger" *ngIf="regForm.get('img')?.invalid && regForm.get('img')?.touched">Please
+                      Select Valid Image</span>
+                  </div>
+
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="submit" class="btn btn-primary btn-lg ms-2"
+                      [disabled]="regForm.invalid">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

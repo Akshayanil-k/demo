@@ -1,0 +1,48 @@
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Employee Management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">LOGIN</h1>
+  </div>
+
+  <form class="py-5" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend>Login</legend>
+      <div class="mb-3">
+        <label for="email" class="form-label"><b>Email</b></label>
+        <input type="email" [(ngModel)]="userData.email" name="email" class="form-control" placeholder="Enter email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label"><b>Password</b></label>
+        <input type="password" [(ngModel)]="userData.password" name="password" class="form-control" placeholder="Enter password" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" checked="checked" name="remember" class="form-check-input">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-danger">Login</button>
+    </fieldset>
+  </form>
+</div>
+
+

@@ -1,0 +1,35 @@
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#38ae92;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.nav{
+  width: 220px;
+  height: 100%;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #0f0e0e;
+  border: #68a3c1;
+  border-width: 2px; 
+  
+  display: block; /* Added display block to make the links fill the width of the nav */
+
+  
+  border-bottom: 2px solid #d72421; /* Changed border to a solid line */
+  padding: 10px 20px; /* Added padding for more space */
+}
+
+.nav-link:hover {
+  color: #e12d2d;
+  background-color:  #68a3c1;
+  cursor: pointer;
+}
+

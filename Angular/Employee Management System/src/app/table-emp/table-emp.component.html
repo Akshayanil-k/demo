@@ -1,0 +1,14 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table >
+      <tr>
+        <th >Id</th>
+        <th>Full Name</th>
+        <th>Employee Role</th>
+      </tr>
+      <tr *ngFor="let item of empDetails;">
+          <td>{{item.id}}</td>
+        <td>{{item.fname}} {{item.lname}}</td>
+        <td>{{item.emprole}}</td>
+      </tr>
+    </table>
+</div>

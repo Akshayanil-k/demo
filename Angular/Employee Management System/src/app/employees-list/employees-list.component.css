@@ -1,0 +1,58 @@
+table {
+  margin-top: 1rem;
+}
+
+th,
+td {
+  text-align: left;
+}
+
+tr:nth-child(odd) {
+  background-color: #40b89c;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #15b3c2;
+}
+
+.search {
+  margin-top: 2rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 0px 15px rgba(48, 40, 40, 0.2);
+}
+
+.card-body {
+  padding: 0;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #448f6c;
+  color: rgba(155, 55, 55, 0.3843137255);
+}
+
+.btn-outline-primary:hover {
+  background-color: #1b8878;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: rgba(155, 55, 55, 0.3843137255);
+  border-color: rgba(45, 151, 125, 0.3843137255);
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #efef20;
+}/*# sourceMappingURL=employees-list.component.css.map */

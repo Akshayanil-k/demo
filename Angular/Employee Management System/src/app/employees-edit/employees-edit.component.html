@@ -1,0 +1,134 @@
+<section class="h-100 .text-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="card-body p-md-5 text-black">
+            <h3 class="mb-5 text-uppercase text-primary">Employee Edit Form</h3>
+
+            <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm)">
+              <!-- First name and last name fields on the same row -->
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="text" class="form-control form-control-lg" formControlName="fname" />
+                    <label class="form-label">First Name</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('fname')?.invalid && regForm.get('fname')?.touched">First name can only contain
+                      alphabets</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="text" class="form-control form-control-lg" formControlName="lname" />
+                    <label class="form-label">Last Name</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('lname')?.invalid && regForm.get('lname')?.touched">Last name can only contain
+                      alphabets</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="email" class="form-control form-control-lg" formControlName="email" />
+                    <label class="form-label">Email</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">Please enter a valid email
+                      address</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="text" class="form-control form-control-lg" formControlName="emprole" />
+                    <label class="form-label">Employee Job Role</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('emprole')?.invalid && regForm.get('emprole')?.touched">Please enter a valid
+                      job role</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="number" class="form-control form-control-lg" formControlName="age" />
+                    <label class="form-label">Age</label>
+                    <span class="text-danger" *ngIf="regForm.get('age')?.invalid && regForm.get('age')?.touched">Please
+                      enter a valid age</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="date" class="form-control form-control-lg" formControlName="dob" />
+                    <label class="form-label">Date of Birth</label>
+                    <span class="text-danger" *ngIf="regForm.get('dob')?.invalid && regForm.get('dob')?.touched">Please
+                      enter a valid date of birth</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="text" class="form-control form-control-lg" formControlName="phone" />
+                    <label class="form-label">Phone Number</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('phone')?.invalid && regForm.get('phone')?.touched">Please enter a valid phone
+                      number</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="text" class="form-control form-control-lg" formControlName="address" />
+                    <label class="form-label">Address</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('address')?.invalid && regForm.get('address')?.touched">Please enter a valid
+                      address</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="password" class="form-control form-control-lg" formControlName="password" />
+                    <label class="form-label">Password</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched">Password is required
+                      and should be at least 6 characters long</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <input type="password" class="form-control form-control-lg" formControlName="confirmPassword" />
+                    <label class="form-label">Confirm Password</label>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('confirmPassword')?.invalid && regForm.get('confirmPassword')?.touched">Confirm
+                      Password is required</span>
+                    <span class="text-danger"
+                      *ngIf="regForm.get('password')?.value !== regForm.get('confirmPassword')?.value && regForm.get('confirmPassword')?.touched">Passwords
+                      do not match</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="file" class="form-control form-control-lg" id="img" formControlName="img" />
+                <label class="form-label">Upload Image</label><br>
+                <span class="text-danger" *ngIf="regForm.get('img')?.invalid && regForm.get('img')?.touched">Please
+                  Select Valid Image</span>
+              </div>
+
+              <!-- Submit button -->
+              <div class="row d-flex justify-content-center mb-4">
+                <div class="col-md-4 text-center">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
